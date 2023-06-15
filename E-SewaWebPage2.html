@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-SEWA | HOME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <style>
+        
+        body{
+            margin:0;
+            top:0;
+            left:0;
+            background: hsla(120, 73%, 75%, 1);
+            background: linear-gradient(to right, hsla(120, 73%, 75%, 1) 0%, hsla(120, 100%, 50%, 1) 0%, hsla(130, 100%, 49%, 1) 0%, hsla(142, 100%, 48%, 1) 0%, hsla(153, 100%, 47%, 1) 23%, hsla(180, 100%, 45%, 1) 100%);
+            background: -moz-linear-gradient(to right, hsla(120, 73%, 75%, 0.1) 0%, hsla(120, 100%, 50%, 1) 0%, hsla(130, 100%, 49%, 1) 0%, hsla(142, 100%, 48%, 1) 0%, hsla(153, 100%, 47%, 1) 23%, hsla(180, 100%, 45%, 1) 100%);
+            background: -webkit-linear-gradient(to right, hsla(120, 73%, 75%, 0.2) 0%, hsla(120, 100%, 50%, 1) 0%, hsla(130, 100%, 49%, 1) 0%, hsla(142, 100%, 48%, 1) 0%, hsla(153, 100%, 47%, 1) 23%, hsla(180, 100%, 45%, 1) 100%);
+            /* background-size: 10vmin 10vmin; */
+            /* z-index: -1; */
+            /* background-position: 0px, 0px;
+            transition: background-size 1000ms ease;
+            animation: bg 10s infinite linear; */
+        }
+    
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .navbar{
+            height:12vmin;
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+        }
+
+        .categoriesRight{
+            margin:5vmin;
+            margin-left: auto;
+            color:#042c3c;
+        }
+        a{
+            cursor: pointer;
+            transition: all 100ms;
+        }
+        .bgImage{
+            position:absolute;
+            top:12vmin;
+            height: 12vmin;
+            width:100%;
+        }
+        .bgImage{
+            background: url("https://img.freepik.com/premium-vector/landscape-16-page-medical-healthcare-hospital-profile-template-layout-brochure-design_615515-69.jpg?w=2000") no-repeat;
+            background-size: 300%;
+            height: 20vmin;
+            animation:pan-image 20s infinite linear;
+        }
+        @keyframes pan-image{
+            0%{
+                background-position: 0% 0%;
+                background-size: 100%;
+            }
+            20%{
+                background-position: 40% 40%;
+                background-size: 100%;
+            }
+            20.0001%{
+                background-position: 40.1% 40%;
+                background-size: 100%;
+            }
+            40%{
+                background-position: 80% 80%;
+                background-size: 100%;
+            }
+            40.001%{
+                background-position: 80.1% 80%;
+                background-size: 100%;
+            }
+            50%{
+                background-position: 100% 100%;
+                background-size: 100%;
+            }
+            80%{
+                background-position: 40% 40%;
+                background-size: 100%;
+            }
+            80.001%{
+                background-position: 39.9% 39%;
+                background-size: 100%;
+            }
+            90%{
+                background-position: 100% 0%;
+                background-size: 120%;
+            }
+            100%{
+                background-position: 0% 0%;
+                background-size: 100.1%;
+            }
+        }
+
+        .screen{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 65vmin;
+            
+        }
+        .screenLeft{
+            height: 60%;width: 25vmin;position: absolute;top: 40%;
+            margin-left:0;
+            background-color: #E2FEFE;
+            border-top-right-radius: 5vmin;
+            border-bottom-right-radius: 5vmin;
+            padding:5vmin;
+            color:#032635;
+            transition: all 500ms;
+            font-family: 'Comfortaa', cursive;
+            font-weight: bold;
+        }
+        .screenLeft h1{
+            margin-left: -2vmin;font-size: 3vmin;font-weight: bold;
+            margin-top: -2vmin;
+            transition: all 500ms;
+            font-family: 'Comfortaa', cursive;
+        }
+        .screenLeft .services{
+            margin: 0vmin;text-decoration: none;list-style: none;font-size: 2vmin;
+        }
+        .screenLeft:hover .services{
+            font-weight: bold;
+        }
+        .services li{
+            padding: 1.4vmin;
+            margin-top: 7vmin;
+            transition: all 300ms;
+            margin-left: -5vmin;
+        }
+        .screenLeft:hover{
+            height: 60vmin;width: 35vmin;top: 30vmin;
+        }
+        .screenLeft:hover li{
+            margin-left: 2vmin;
+        }
+        .screenLeft:hover h1{
+            margin-left: 2vmin;
+        }
+        .screenLeft a:hover{
+            margin-left: -2vmin;
+        }
+        .servicesEmergency{
+            border: none;
+            font-size: 2vmin;
+            margin-left: -3vmin;
+            transition: all 200ms;
+        }
+        .dropdown-content:hover{
+            margin-left: -2vmin;
+            font-size: 2vmin;
+        }
+        .dropdown-content{
+            background-color: #E2FEFE;
+            padding: 3vmin;
+            display: none;
+            margin-top: -0.5vmin;
+            border-bottom-left-radius: 2vmin;
+            border-bottom-right-radius: 2vmin;
+            border-top-left-radius: 2vmin;
+            font-size: 1.8vmin;
+        }
+        .dropdown-content1{
+            display: none;
+            margin-top: -5.8vmin;
+            border-bottom-left-radius: 2vmin;
+            border-bottom-right-radius: 2vmin;
+            border-top-left-radius: 2vmin;
+            font-size: 1.8vmin;
+        }
+        .show {
+            display: block;
+        }
+        .profile:hover .dropdown-content1{
+            display: block;
+        }
+
+        .center{
+            position: absolute;
+            margin-top: 50vmin;
+            width: 61vmin;
+            text-align: center;
+            margin-left: 36%;
+            font-size: 3vmin;
+            font-weight: bold;
+            font-family: 'Comfortaa', cursive;
+            color: var(--sec2_color);
+        }
+        .listItems{
+            font-family: 'Comfortaa', cursive;
+            font-size: 3vmin;
+            color: #E2FEFE;
+            cursor: pointer;
+            transition: all 100ms;
+        }
+        .listItems:hover{
+            font-weight: bold;
+            font-size: 4vmin;
+        }
+
+        /* .screenRight{
+            height: 100%;width: 50vmin;position: absolute;top:32vmin;
+            right:0;
+            background-color: #E2FEFE;
+            border-top-left-radius: 5vmin;
+            margin-right: 0;
+            transition: all 500ms;
+            font-family: 'Comfortaa', cursive;
+        }
+        .screenRight:hover{
+            width: 60vmin;
+        }
+        .screenRightHeading{
+            margin-left: 3vmin;
+            font-family: 'Comfortaa', cursive;
+            
+            font-size: 5vmin;
+        } */
+
+        button{
+            background-color: #E2FEFE;
+            border: none;
+            cursor: pointer;
+            margin-left: 5vmin;
+            font-size: 2vmin;
+            height: 5vmin;
+            border-bottom: 2px solid var(--sec2_color);
+            border-bottom-right-radius: 2vmin;
+            font-family: 'Comfortaa', cursive;
+            font-weight: bold;
+        }
+        button:hover{
+            border-top-left-radius: 4vmin;
+            border-bottom-left-radius: 4vmin;
+        }
+        form{
+            margin: 5vmin;
+            display: none;
+        }
+        input{
+            margin: 2vmin;
+        }
+        #fname, #lname, #age{
+            background-color: var(--main_color);
+            border: none;
+            border-bottom: 2px solid var(--sec2_color);
+            border-bottom-right-radius: 2vmin;
+            font-size: 2vmin;
+            color: #032635;
+            font-family: 'Comfortaa', cursive;
+            width:25vmin;
+            height: 5vmin;
+            font-weight: bold;
+        }
+        textarea{
+            font-size: 2vmin;
+            border: none;
+            background-color: var(--main-color);
+            border-bottom: 2px solid var(--sec2_color);
+        }
+        #submit{
+            margin-top: 2vmin;
+        }
+
+        .call{
+            font-weight: bold;
+            margin-top: 5vmin;
+            margin-left: 4vmin;
+            font-size: 3vmin;
+            display: none;
+        }
+        .call2{
+            font-weight: bold;
+            margin-top: 5vmin;
+            margin-left: 4vmin;
+            font-size: 3vmin;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logoLeft">
+            <img src="PHOTO-2023-06-09-01-03-57.jpg" style="width: 32vmin; height:12vmin">
+        </div>
+        <div class="categoriesRight">
+            <a>Home |</a>
+            <a>📞 Emergency: 7905461817 |</a>
+            <a>esewa.helpline@gmail.com</a>
+        </div>
+    </div>
+    <div class="screen">
+        <div class="bgImage">
+        </div>
+        <div class="screenLeft">
+            <h1>Our services</h1>
+            <ul class="services">
+                <li><a href="E-sewaWebPage4.html">Consultation</a></li>
+                <li>
+                    <button onclick="myFunction4()" class="servicesEmergency">Emergency Services</button>
+                    <div id="dropdown" class="dropdown-content">
+                        <a>No. 7905461817</a>
+                    </div>
+                </li>
+                <li class="profile"><a>Doctors Profile</a>
+                    <div class="dropdown-content1">
+                        <ul>
+                            <li><a href="E-sewaWepPage5.html" class="profile">Login</a></li>
+                            <li><a href="E-sewaWebPage6.html" class="profile">Register</a></li>
+                        </ul>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="center">
+            Telemedicine can be used for the people of all ages, especially it has been proven more beneficial for old age people. For some people it is difficult to reach out a good hospital. This is where we come into play.<br><br>
+            We spread awarenss related to child care, vaccination, maternal care, post natal and pre natal care, menstruation, masturbation hygiene, menarche and other problems faced by women and child.
+        </div>
+        <!-- <div class="screenRight">
+            <h1 class="screenRightHeading">How can we help you?</h1>
+            <button class="Btn" id="consult">Consultancy</button>
+            <button class="Btn" id="emergency">Emergency</button>
+            <form id="form">
+                <input for="firstname" id="fname" placeholder="Enter your first name"><br>
+                <input for="lastname" id="lname" placeholder="Enter your last name"><br>
+                <input type="number" id="age" placeholder="Enter your age"><br>
+                Sex:<br>
+                <input type="radio" id="male" name="Sex" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="Sex" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="Sex" value="other">
+                <label for="other">Other</label><br>
+                <textarea rows="10" id="address" cols="30" placeholder="Enter your address"></textarea>
+                <button class="submit" id="submit">Submit</button>
+            </form>
+            <div class="call2" id="call2">
+                Toll free number: 1600 483 3232
+            </div>
+            <div class="call" id="call">
+                Toll free number: 1750 382 4747
+            </div>
+        </div> -->
+    </div>
+    <script>
+        // function myfunction3(){
+        //     document.getElementById("call2").style.display="block";
+        //     document.getElementById("form").style.display="none";
+        // }
+        // function myfunction(){
+        //     document.getElementById("consult").style.display="none";
+        //     document.getElementById("emergency").style.display="none";
+        //     document.getElementById("form").style.display="block";
+        //     document.getElementById("submit").addEventListener("click",myfunction3)
+        // }
+        // function myfunction2(){
+        //     document.getElementById("consult").style.display="none";
+        //     document.getElementById("emergency").style.display="none";
+        //     document.getElementById("call").style.display="block";
+        // }
+        // document.getElementById("consult").addEventListener("click",myfunction)
+        // document.getElementById("emergency").addEventListener("click",myfunction2)
+
+        function myFunction4() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.servicesEmergency')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

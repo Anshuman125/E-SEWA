@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-SEWA | PAYMENT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-size: 2.5vmin;
+        }
+        a{
+            text-decoration: none;
+        }
+        .screen{
+            display:flex;
+            flex-direction:column;
+        }
+        .navbar{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Comfortaa', cursive;
+            gap:55vmin;
+        }
+        .home{
+            font-size: 2vmin;
+            color: black;
+        }
+        img{
+            height:10vmin;
+            width:25vmin;
+        }
+        .heading{
+            font-family:'Comfortaa', cursive;
+            font-size: 4vmin;
+            font-weight: bold;
+        }
+        
+        .body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        /* li{
+            margin: 10vmin;
+        } */
+        body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: row;
+        }
+  
+        .container {
+            width: 80vmin;
+            margin: 5vmin auto;
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+  
+        h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+        }
+  
+        label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #555;
+        }
+    
+        input[type="text"], input[type="password"], select {
+            width: 85%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 2vmin;
+            margin-bottom: 20px;
+        }
+
+        *:focus {
+            outline: none;
+        }
+    
+        .row::after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+    
+        .col-6 {
+        width: 50%;
+        float: left;
+        }
+    
+        .submit-row {
+        text-align: center;
+        margin-top: 30px;
+        }
+    
+        .submit-btn {
+        padding: 12px 30px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+    
+        .submit-btn:hover {
+        background-color: #45a049;
+        }
+
+        .upi{
+          margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="navbar">
+            <div class="logo">
+                <img src="PHOTO-2023-06-09-01-03-57.jpg">
+            </div>
+            <div class="heading">Payment</div>
+            <a class="home" href="E-SewaWebPage2.html">Home</a>
+        </div>
+        <div class="body">
+            <!-- <ul>
+                <li>
+                    <div class="mail">GMAIL: <a href="">esewa.helpline@gmail.com</a></div>
+                </li>
+                <li>
+                    <ul><a href="https://call.whatsapp.com/voice/mAeafXy0GDChq7iZcL1c62">Customer care</a></ul>
+                </li>
+                <li>
+                    Emergency helpline: 7905461817
+                </li>
+            </ul> -->
+            <div class="container">
+                <h2>Payment Gateway</h2>
+                <form id="form">
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="cardNumber">Card Number:</label>
+                      <input type="text" id="cardNumber" required>
+                    </div>
+                    <div class="col-6">
+                      <label for="expiryDate">Expiry Date:</label>
+                      <input type="text" id="expiryDate" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="cvv">CVV:</label>
+                      <input type="password" id="cvv" required>
+                    </div>
+                    <div class="col-6">
+                      <label for="cardHolder">Cardholder Name:</label>
+                      <input type="text" id="cardHolder" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="billingAddress">Billing Address:</label>
+                      <input type="text" id="billingAddress" required>
+                    </div>
+                    <div class="col-6">
+                      <label for="postalCode">Postal Code:</label>
+                      <input type="text" id="postalCode" required>
+                    </div>
+                  </div>
+                  <div class="submit-row">
+                    <button type="submit" class="submit-btn" id="submit">Pay Now</button>
+                  </div>
+                </form>
+              </div>
+        </div>
+    </div>
+    <script>
+      var form = document.getElementById('form');
+        var submitBtn = document.getElementById('submit');
+      
+        form.addEventListener('input', function () {
+          var inputs = form.querySelectorAll('input, select');
+          var isFormValid = true;
+      
+          for (var i = 0; i < inputs.length; i++) {
+            if (!inputs[i].value) {
+              isFormValid = false;
+              break;
+            }
+          }
+      
+          submit.disabled = !isFormValid;
+        });
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+            
+            var paymentPage = "E-sewaWebPage2.html";
+            window.location.href = paymentPage; // Redirect to E-sewaWebPage2.html
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-SEWA | LOGIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            font-family:'Comfortaa', cursive;
+            overflow-x: hidden;
+            border: 2px solid black;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .body{
+            background: hsla(120, 73%, 75%, 1);
+            background: linear-gradient(0deg, hsla(120, 73%, 75%, 1) 0%, hsla(120, 100%, 50%, 1) 0%, hsla(130, 100%, 49%, 1) 0%, hsla(142, 100%, 48%, 1) 0%, hsla(153, 100%, 47%, 1) 23%, hsla(180, 100%, 45%, 1) 100%);
+            background: -moz-linear-gradient(0deg, hsla(120, 73%, 75%, 1) 0%, hsla(120, 100%, 50%, 1) 0%, hsla(130, 100%, 49%, 1) 0%, hsla(142, 100%, 48%, 1) 0%, hsla(153, 100%, 47%, 1) 23%, hsla(180, 100%, 45%, 1) 100%);
+            background: -webkit-linear-gradient(0deg, hsla(120, 73%, 75%, 1) 0%, hsla(120, 100%, 50%, 1) 0%, hsla(130, 100%, 49%, 1) 0%, hsla(142, 100%, 48%, 1) 0%, hsla(153, 100%, 47%, 1) 23%, hsla(180, 100%, 45%, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#90EE90", endColorstr="#00FF00", GradientType=1 );
+        }
+        img{
+            height:10vmin;
+            width:25vmin;
+        }
+        .navbar{
+            display: flex;
+            flex-direction: row;
+        }
+        .heading{
+            width:100%;
+            margin-left: 15%;
+            font-size: 5vmin;
+            font-weight: bold;
+        }
+        .screenLeft{
+            height: 43%;width: 25vmin;position: absolute;top: 25%;
+            margin-left:0;
+            background-color: #E2FEFE;
+            border-top-right-radius: 5vmin;
+            border-bottom-right-radius: 5vmin;
+            padding:5vmin;
+            color:#032635;
+            transition: all 500ms;
+            font-family: 'Comfortaa', cursive;
+            font-weight: bold;
+        }
+        .screenLeft h1{
+            margin-left: -2vmin;font-size: 3vmin;font-weight: bold;
+            margin-top: -2vmin;
+            transition: all 500ms;
+            font-family: 'Comfortaa', cursive;
+        }
+        .screenLeft .services{
+            margin: 0vmin;text-decoration: none;list-style: none;font-size: 2vmin;
+        }
+        .screenLeft:hover .services{
+            font-weight: bold;
+        }
+        .services li{
+            padding: 1.4vmin;
+            margin-top: 7vmin;
+            transition: all 300ms;
+            margin-left: -5vmin;
+        }
+        .screenLeft:hover{
+            height: 50vmin;width: 35vmin;top: 20vmin;
+        }
+        .screenLeft:hover li{
+            margin-left: 2vmin;
+        }
+        .screenLeft:hover h1{
+            margin-left: 2vmin;
+        }
+        .screenLeft a:hover{
+            margin-left: -2vmin;
+        }
+        .servicesEmergency{
+            border: none;
+            font-size: 2vmin;
+            margin-left: -3vmin;
+            transition: all 200ms ease;
+            background:  #E2FEFE;
+        }
+        .dropdown-content:hover{
+            margin-left: -2vmin;
+            font-size: 2vmin;
+            transition: all 200ms;
+        }
+        .dropdown-content{
+            background-color: #E2FEFE;
+            padding: 3vmin;
+            display: none;
+            margin-top: -0.5vmin;
+            border-bottom-left-radius: 2vmin;
+            border-bottom-right-radius: 2vmin;
+            border-top-left-radius: 2vmin;
+            font-size: 1.8vmin;
+            transition: all 200ms;
+        }
+        .dropdown-content1{
+            display: none;
+            margin-top: -5.8vmin;
+            border-bottom-left-radius: 2vmin;
+            border-bottom-right-radius: 2vmin;
+            border-top-left-radius: 2vmin;
+            font-size: 1.8vmin;
+            transition: all 200ms;
+        }
+        .show {
+            display: block;
+        }
+        .profile:hover .dropdown-content1{
+            display: block;
+            transition: all 200ms;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5vmin;
+        }
+        *:focus {
+            outline: none;
+        }
+        input{
+            margin-top: 3vmin;
+            width:50vmin;
+            height: 4vmin;
+            font-size: 2vmin;
+            border-radius: 20vmin;
+            font-family:'Comfortaa', cursive;
+            border:none;
+        }
+        input::placeholder{
+            text-align: center;
+        }
+        .submit{
+            position: relative;
+            margin-top:20%;
+            margin-bottom:5%;
+            margin-left: 40%;
+            height: 4vmin;
+            width: 20vmin;
+            font-size: 2vmin;
+            border-radius: 20vmin;
+            background-color: skyblue;
+            font-family:'Comfortaa', cursive;
+            border: none;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="navbar">
+            <div class="logo">
+                <img src="PHOTO-2023-06-09-01-03-57.jpg">
+            </div>
+            <div class="heading">
+                <div class="heading">LogIn</div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="screenLeft">
+                <h1>Our services</h1>
+                <ul class="services">
+                    <li><a href="E-sewaWebPage4.html">Consultation</a></li>
+                    <li>
+                        <button onclick="myFunction4()" class="servicesEmergency">Emergency Services</button>
+                        <div id="dropdown" class="dropdown-content">
+                            <a>No. 7905461817</a>
+                        </div>
+                    </li>
+                    <li class="profile"><a>Doctors Profile</a>
+                        <div class="dropdown-content1">
+                            <ul>
+                                <li><a href="E-sewaWepPage5.html" class="profile">Login</a></li>
+                                <li><a href="E-sewaWebPage6.html" class="profile">Register</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="information">
+                <!-- <button class="Btn" id="consult">Consultancy</button>
+                <button class="Btn" id="emergency">Emergency</button> -->
+                <form id="form">
+                    <input type="text" for="rno" id="rno" placeholder="Enter your Registration number" required><br>
+                    <input type="password" for="password" id="password" placeholder="Enter your Password" required><br>
+                    
+                </form>
+                <button onclick="history.back()" class="submit" id="submit" disabled>Submit</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var form = document.getElementById('form');
+        var submitBtn = document.getElementById('submit');
+      
+        form.addEventListener('input', function () {
+          var inputs = form.querySelectorAll('input, select');
+          var isFormValid = true;
+      
+          for (var i = 0; i < inputs.length; i++) {
+            if (!inputs[i].value) {
+              isFormValid = false;
+              break;
+            }
+          }
+      
+          submit.disabled = !isFormValid;
+        });
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+            
+            var paymentPage = "E-sewaWebPage1.html";
+            window.location.href = E-sewaWebPage1; // Redirect to E-sewaWebPage1.html
+        });
+        function myFunction4() {
+            document.getElementById("dropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.servicesEmergency')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+      </script>
+</body>
+</html>
